@@ -2,6 +2,13 @@ StockMarket::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
+  # get '/:quote' => 'quotes#quote'
+  get '/q' => 'quotes#quote'
+  get '/:symbol' => 'quotes#quote'
+  get '/' => 'quotes#home'
+
+
+  
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
