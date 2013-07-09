@@ -1,0 +1,10 @@
+<div class="quote-details">
+	<div class="quote-name">
+		<span class="name"><%= @quote[@symbol].name %> </span><span class="symbol">(<%= @quote[@symbol].symbol %>)</span>
+	</div>
+	<div class-"quote-price">
+		<span class="last-trade-price"><%= @quote[@symbol].lastTrade %> </span><span class="change"><%= @quote[@symbol].change %></span>
+	</div>
+</div>
+
+<FORM><INPUT Type="button" VALUE="Back" onClick="history.go(-1);return true;"></FORM>
