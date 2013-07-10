@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Stock Market</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<header>Stock Quote</header>
-<%= yield %>
-<footer>Powered by Yahoo! Finance</footer>
-</body>
+	<head>
+	  <title>Stock Market</title>
+	  <%= stylesheet_link_tag    "application", :media => "all" %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<% flash.each do |key, value| %>
+  			<div class="alert-<%= key %>"><%= value %></div>
+		<% end %>
+		<header>Stock Quote</header>
+		<%= yield %>
+		<footer>Powered by Yahoo! Finance</footer>
+	</body>
 </html>

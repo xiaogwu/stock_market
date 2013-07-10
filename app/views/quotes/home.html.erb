@@ -1,4 +1,10 @@
 <strong>Enter Stock Symbol to :</strong>
 <form action='/q' method='get'/>
 <input type='search' name='symbol' placeholder='e.g. GOOG'/>
-<button>Submit</button>
+<button>Submit</button> -->
+
+<%= form_tag("/q", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:symbol, nil, :placeholder => "e.g. GOOG") %>
+  <%= submit_tag("Submit") %>
+<% end %>

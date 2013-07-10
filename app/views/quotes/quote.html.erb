@@ -6,5 +6,5 @@
 		<span class="last-trade-price"><%= @quote[@symbol].lastTrade %> </span><span class="change"><%= @quote[@symbol].change %></span>
 	</div>
 </div>
-
-<FORM><INPUT Type="button" VALUE="Back" onClick="history.go(-1);return true;"></FORM>
+<%= link_to "Back", :back %>
+<!-- <FORM><INPUT Type="button" VALUE="Back" onClick="history.go(-1);return true;"></FORM> -->
